@@ -4,27 +4,32 @@ about: Suggest an idea for this project
 title: ''
 labels: ''
 assignees: ''
-
 ---
+
+## Background
+
+<!--
+Describe the context for this issue and the problem you want to solve.
+Why is this needed now? What is painful in the current situation?
+-->
 
 ## Goal
 
-(Closed になるために必要な状態)
+<!--
+List the conditions that must be met in order to close this issue.
+Examples:
+- Users can do ◯◯
+- The API response includes △△
+-->
 
-## Motivation
+## Out of scope (won't do in this issue)
 
-(Issue を何故立てたのですか？)
-(Issue を作成した背景は？)
+<!--
+Describe what is explicitly out of scope for this issue.
+Include items that might be done in the future but will not be handled in this issue.
+-->
 
-## Reference (optional)
-
-(参考リンクなどあれば)
-
-## Schedule (optional)
-
-(Closed になるまでのスケジュール)
-
-## Tasks (optional)
+## Tasks
 
 - [ ] Task 1
 - [ ] Task 2

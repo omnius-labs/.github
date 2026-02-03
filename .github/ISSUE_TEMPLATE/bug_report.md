@@ -9,24 +9,24 @@ assignees: ''
 
 ## Summary
 
-(バグの概要)
+<!-- Short summary of the bug -->
 
 ## Steps
 
-(バグの再現手順)
+<!-- Step-by-step instructions to reproduce the bug -->
 
 1. Do action
 2. Do another action
-3. Wrong Behavior !!
+3. Wrong behavior !!
 
 ## Expected
 
-(Closed になるために必要な状態)
+<!-- State required for this issue to be considered fixed -->
 
 ## Actual
 
-(Issue を作成した時点の状態)
+<!-- Current actual behavior at the time this issue is created -->
 
-## Images (optional)
+## Attachments (optional)
 
-(バグ発生時の画像)
+<!-- Screenshots, logs, videos, or any other related materials -->
