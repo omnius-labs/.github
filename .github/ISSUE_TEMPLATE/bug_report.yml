@@ -1,0 +1,46 @@
+name: Bug report
+description: Create a report to help us improve
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short summary of the bug
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: Step-by-step instructions to reproduce the bug
+      value: |
+        1. Do action
+        2. Do another action
+        3. Wrong behavior !!
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      description: State required for this issue to be considered fixed
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: Current actual behavior at the time this issue is created
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments (optional)
+      description: Screenshots, logs, videos, or any other related materials
+    validations:
+      required: false
