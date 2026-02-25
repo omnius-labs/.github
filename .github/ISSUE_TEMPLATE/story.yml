@@ -1,0 +1,131 @@
+name: Story
+description: User-facing, independently valuable increment
+title: "[Story] "
+labels:
+  - "type:story"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for one user-value increment that can be completed in a short cycle.
+        Keep it specific enough that acceptance can be judged unambiguously.
+
+  - type: input
+    id: parent_epic
+    attributes:
+      label: Parent epic
+      description: Link to parent epic issue URL or number.
+      placeholder: "#123"
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User story
+      description: Write in "As a / I want / so that" format.
+      placeholder: |
+        As a first-time user,
+        I want to see field-level validation guidance,
+        so that I can complete signup without trial and error.
+    validations:
+      required: true
+
+  - type: textarea
+    id: story_background
+    attributes:
+      label: Background / problem context
+      description: What concrete user or business pain does this story address?
+      placeholder: |
+        Users abandon signup when errors appear only after submit.
+        This story addresses immediate feedback to reduce drop-off.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: List testable conditions required to close this story.
+      placeholder: |
+        - Given invalid email, when focus leaves the field, then an inline error is shown.
+        - Given all fields are valid, when user submits, then account is created successfully.
+        - Analytics event "signup_validation_error" is emitted with field name.
+    validations:
+      required: true
+
+  - type: textarea
+    id: in_scope
+    attributes:
+      label: In scope
+      description: What is included in this story.
+      placeholder: |
+        - Inline validation for email/password fields
+        - Error copy for supported locales
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What is explicitly excluded from this story.
+      placeholder: |
+        - Password policy redesign
+        - Social login support
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business urgency for scheduling.
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true
+
+  - type: input
+    id: estimate
+    attributes:
+      label: Estimate
+      description: Story points or ideal days.
+      placeholder: "3 SP / 2 days"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / blockers (optional)
+      description: External constraints and prerequisites.
+      placeholder: |
+        - Requires copy review from product marketing
+        - Depends on analytics schema PR #456
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_notes
+    attributes:
+      label: Test notes (optional)
+      description: Key test perspectives, edge cases, environments.
+      placeholder: |
+        - Test in Safari + Chrome
+        - Verify behavior on slow network
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: story_readiness
+    attributes:
+      label: Readiness checklist
+      options:
+        - label: Acceptance criteria are specific and testable.
+          required: true
+        - label: Scope and out-of-scope are explicitly documented above.
+          required: true

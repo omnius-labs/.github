@@ -1,0 +1,121 @@
+name: Epic
+description: Large initiative spanning multiple stories and/or sprints
+title: "[Epic] "
+labels:
+  - "type:epic"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for large initiatives that require multiple stories.
+        Keep scope clear so this epic can be decomposed and tracked consistently.
+
+  - type: input
+    id: epic_goal
+    attributes:
+      label: Epic goal
+      description: What outcome should this epic achieve? (1-2 sentences)
+      placeholder: "Improve onboarding completion rate by reducing signup friction"
+    validations:
+      required: true
+
+  - type: textarea
+    id: business_outcome
+    attributes:
+      label: Business outcome / KPI
+      description: Define measurable outcomes with baseline and target.
+      placeholder: |
+        - KPI: Onboarding completion rate
+        - Baseline: 42%
+        - Target: 60%
+        - Measurement window: 30 days after release
+    validations:
+      required: true
+
+  - type: textarea
+    id: background_problem
+    attributes:
+      label: Background / problem
+      description: What problem exists now, and why should we solve it now?
+      placeholder: |
+        Current funnel drops heavily on step 2 due to unclear validation messages.
+        This blocks Q2 growth objectives.
+    validations:
+      required: true
+
+  - type: textarea
+    id: in_scope
+    attributes:
+      label: In scope
+      description: Explicitly list what this epic includes.
+      placeholder: |
+        - Redesign signup form validation UX
+        - Add progress indicator
+        - Instrument event tracking for each onboarding step
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: Explicitly list what this epic does NOT include.
+      placeholder: |
+        - Full authentication system rewrite
+        - Mobile native onboarding redesign
+    validations:
+      required: true
+
+  - type: textarea
+    id: epic_done_criteria
+    attributes:
+      label: Definition of done (epic level)
+      description: Conditions required to close this epic.
+      placeholder: |
+        - KPI target is reached in agreed measurement window
+        - All child stories are completed
+        - Post-release verification report is attached
+    validations:
+      required: true
+
+  - type: textarea
+    id: candidate_child_stories
+    attributes:
+      label: Candidate child stories
+      description: Break this epic into story-sized increments.
+      placeholder: |
+        - [ ] As a new user, I can see field-specific validation messages.
+        - [ ] As a new user, I can track onboarding progress.
+        - [ ] As an analyst, I can view onboarding drop-off by step.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies_risks
+    attributes:
+      label: Dependencies / risks (optional)
+      description: Teams, systems, approvals, technical risks, unknowns.
+      placeholder: |
+        - Legal review required for copy updates
+        - Depends on analytics schema update
+    validations:
+      required: false
+
+  - type: input
+    id: target_window
+    attributes:
+      label: Target window (optional)
+      description: Quarter or date range for completion.
+      placeholder: "2026 Q2 / by 2026-06-30"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: epic_readiness
+    attributes:
+      label: Readiness checklist
+      options:
+        - label: Scope and out-of-scope are explicitly documented above.
+          required: true
+        - label: At least one measurable KPI is defined above.
+          required: true

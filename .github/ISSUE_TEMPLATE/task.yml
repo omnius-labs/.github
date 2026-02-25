@@ -1,0 +1,108 @@
+name: Task
+description: Concrete implementation task linked to a story or epic
+title: "[Task] "
+labels:
+  - "type:task"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for concrete work items such as design, implementation, testing, docs, or review.
+        Every task should be linked to a parent story or epic.
+
+  - type: input
+    id: parent_issue
+    attributes:
+      label: Parent story/epic
+      description: Link to parent issue URL or number.
+      placeholder: "#123"
+    validations:
+      required: true
+
+  - type: input
+    id: task_objective
+    attributes:
+      label: Task objective
+      description: Describe the work with a verb-first statement.
+      placeholder: "Implement inline validation component for signup form"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Task type
+      description: Select the primary activity type.
+      options:
+        - Design
+        - Coding
+        - Testing
+        - Documentation
+        - Review
+        - Operations
+        - Research
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_done_criteria
+    attributes:
+      label: Definition of done (task level)
+      description: Testable conditions required to close this task.
+      placeholder: |
+        - Implementation is merged
+        - Unit tests are added/updated
+        - Lint and CI checks pass
+    validations:
+      required: true
+
+  - type: input
+    id: estimate
+    attributes:
+      label: Estimate
+      description: Remaining work estimate (hours or ideal days).
+      placeholder: "4h / 0.5 day"
+    validations:
+      required: true
+
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: GitHub handle of the responsible person.
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies_blockers
+    attributes:
+      label: Dependencies / blockers (optional)
+      description: Constraints that may delay completion.
+      placeholder: |
+        - Waiting for API contract approval
+        - Requires staging environment access
+    validations:
+      required: false
+
+  - type: textarea
+    id: completion_evidence
+    attributes:
+      label: Completion evidence (optional)
+      description: PR, test result, logs, screenshots, or links.
+      placeholder: |
+        - PR: #789
+        - Test run: https://...
+        - Screenshot: https://...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: task_readiness
+    attributes:
+      label: Readiness checklist
+      options:
+        - label: Parent issue is linked above.
+          required: true
+        - label: Task done criteria are concrete and testable.
+          required: true
